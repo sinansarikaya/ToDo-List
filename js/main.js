@@ -72,6 +72,7 @@ function addItem() {
         "You should fill the form!",
         "danger"
     )
+    setTimeout("close_alert()", 1500);
   }
 
 }
