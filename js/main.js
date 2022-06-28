@@ -11,8 +11,16 @@ rmBtn.addEventListener("click", removeAll);
 const alertFunction = (title, message, type) => `
 <div class="alert alert-${type} alert-dismissible fade show" role="alert">
   <strong>${title}</strong> ${message}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 `
+
+/*
+if(document.getElementsById("alert").innerHTML) {
+    console.log("var")
+} else {
+    console.log("yok")
+}*/
 
 function addItem() {
   if (task.value != 0) {
@@ -32,10 +40,21 @@ function addItem() {
     spanDOM.innerHTML = `<i class="fa-solid fa-xmark"></i>`
     liDOM.appendChild(spanDOM);
 
+    liDOM.addEventListener("click", checkFunc);
+    function checkFunc(){
+        if(liDOM.classList.contains('checked')){
+            liDOM.classList.remove("checked")
+        } else {
+            liDOM.classList.add("checked")
+        } 
+    }
+
     spanDOM.addEventListener("click", removeItem);
     function removeItem() {
         liDOM.remove();    
     }
+
+
     
   } else {
     alert.innerHTML = alertFunction(
@@ -44,6 +63,9 @@ function addItem() {
         "danger"
     )
   }
+
+ 
+
 }
 function removeAll() {
   let ulDOM = document.querySelector("#list");

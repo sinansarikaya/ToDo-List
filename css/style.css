@@ -7,7 +7,7 @@ body {
 
 ul {
   margin: 0;
-  padding: 0;
+  padding: 0 !important;
 }
 
 ul li {
@@ -18,14 +18,12 @@ ul li {
   font-size: 18px;
   transition: 0.2s;
   list-style-type: none;
-
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-
   margin-top: 15px;
-  width: 100%;
+  width: 100% !important;
 }
 
 ul li:nth-child(odd) {
@@ -131,4 +129,13 @@ input[type=submit] {
 }
 .xmarkspan:hover {
   color: #EF6461;
+}
+.checked {
+  padding-top: 6px ;
+}
+#alert {
+  position: absolute;
+  right: 10px;
+  width: 500px;
+  margin: 20px 20px 0 0 
 }
