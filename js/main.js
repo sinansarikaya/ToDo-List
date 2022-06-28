@@ -23,16 +23,18 @@ function addItem() {
     }
     let liDOM = document.createElement("li");
     liDOM.classList.add("li");
-    liDOM.innerHTML = `${task.value} <span class="xmarkspan" ><i class="fa-solid fa-xmark"></i></span>`;
-    ulDOM.append(liDOM);
+    liDOM.innerHTML = task.value;
+    ulDOM.appendChild(liDOM);
     task.value = "";
     
-    liDOM.addEventListener("click", removeItem);
+    let spanDOM = document.createElement("span");
+    spanDOM.classList.add("xmarkspan");
+    spanDOM.innerHTML = `<i class="fa-solid fa-xmark"></i>`
+    liDOM.appendChild(spanDOM);
 
+    spanDOM.addEventListener("click", removeItem);
     function removeItem() {
-        
-        liDOM.remove();
-        
+        liDOM.remove();    
     }
     
   } else {

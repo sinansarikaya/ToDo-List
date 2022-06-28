@@ -15,60 +15,12 @@
     <title>To Do List</title>
   </head>
   <body>
-    <div class="mr-1" style="position: relative">
-      <div style="position: absolute; top: 0; right: 0">
-        <div
-          id="liveToast"
-          class="toast success hide"
-          role="alert"
-          aria-live="assertive"
-          aria-atomic="true"
-          data-delay="4000"
-        >
-          <div>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="toast"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="toast-body">Listeye eklendi.</div>
-        </div>
-      </div>
-    </div>
-    <div class="mr-1" style="position: relative">
-      <div style="position: absolute; top: 0; right: 0">
-        <div
-          id="liveToast"
-          class="toast error hide"
-          role="alert"
-          aria-live="assertive"
-          aria-atomic="true"
-          data-delay="4000"
-        >
-          <div>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="toast"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="toast-body">Listeye boş ekleme yapamazsınız!</div>
-        </div>
-      </div>
-    </div>
     <div class="container">
       <div class="header">
         <h2 class="mt-5">To Do List</h2>
         <div class="input_container">
-          <input type="text" id="task" placeholder="Bugün ne yapacaksın?" />
-          <input type="submit" id="addBtn" class="button" value="Add">
+          <input type="text" id="task" placeholder="What needs to be done?" />
+          <input type="submit" id="addBtn"  class="button" value="Add">
           <input type="submit" id="rmAll" class="button" value="Remove">
         </div>
       </div>
