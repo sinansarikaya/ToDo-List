@@ -21,6 +21,7 @@ function close_alert() {
 }
 
 
+
 function addItem() {
   if (task.value != 0) {
     if (!document.querySelector("#list")) {
@@ -31,7 +32,9 @@ function addItem() {
     let liDOM = document.createElement("li");
     liDOM.classList.add("li");
     liDOM.innerHTML = task.value;
+    setStorage(task.value);
     ulDOM.appendChild(liDOM);
+
     task.value = "";
     
     let spanDOM = document.createElement("span");
@@ -56,6 +59,7 @@ function addItem() {
     }
 
     spanDOM.addEventListener("click", removeItem);
+    
     function removeItem() {
         alert.innerHTML = alertFunction(
             "Deleted!",
@@ -93,4 +97,26 @@ function removeAll() {
     ulDOM.remove();
   }
   setTimeout("close_alert()", 1500);
+}
+// LOCALSTORAGE
+//GET LOCALSTORAGE
+function getStorage() {
+    let toDo = JSON.parse(localStorage.getItem("todo"));
+    return toDo;
+}
+//SET LOCALSTORAGE
+function setStorage(value) {
+    let str = JSON.parse(localStorage.getItem("todo"));
+    let toDos;
+    if (str == null) {
+        toDos = [];
+    } else {
+        toDos = getStorage();
+    }
+    toDos.push(value);
+    localStorage.setItem("todo", JSON.stringify(toDos));
+}
+//DELETE LOCALSTORAGE
+function deleteStorage(value) {
+    
 }
