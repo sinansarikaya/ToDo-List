@@ -30,13 +30,11 @@ ul li:nth-child(odd) {
 ul li:hover {
   background: #cccccc;
 }
-
 ul li.checked {
   background: #276678;
   color: #fff;
   text-decoration: line-through;
 }
-
 ul li.checked::before {
   content: "";
   position: absolute;
@@ -62,7 +60,6 @@ ul li.checked::before {
   color: white;
 
 }
-
 .header {
   background-color: #435058;
   padding: 30px 0;
