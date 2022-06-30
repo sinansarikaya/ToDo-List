@@ -4,12 +4,10 @@
 body {
   background-color: #435058 !important;
 }
-
 ul {
   margin: 0;
   padding: 0 !important;
 }
-
 ul li {
   cursor: pointer;
   position: relative;
@@ -25,7 +23,6 @@ ul li {
   margin-top: 15px;
   width: 100% !important;
 }
-
 ul li:nth-child(odd) {
   background: #dedede;
 }
