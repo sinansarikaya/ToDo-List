@@ -20,8 +20,6 @@ function close_alert() {
     al.classList.remove("show");
 }
 
-
-
 function addItem() {
   if (task.value != 0) {
     if (!document.querySelector("#list")) {
@@ -32,7 +30,7 @@ function addItem() {
     let liDOM = document.createElement("li");
     liDOM.classList.add("li");
     liDOM.innerHTML = task.value;
-    setStorage(task.value);
+    //setStorage(task.value);
     ulDOM.appendChild(liDOM);
 
     task.value = "";
@@ -98,6 +96,7 @@ function removeAll() {
   }
   setTimeout("close_alert()", 1500);
 }
+/*
 // LOCALSTORAGE
 //GET LOCALSTORAGE
 function getStorage() {
@@ -120,3 +119,4 @@ function setStorage(value) {
 function deleteStorage(value) {
     
 }
+*/
